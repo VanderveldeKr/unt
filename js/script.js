@@ -34,3 +34,16 @@ openPopUp.forEach(b => b.addEventListener('click', function(e) {
     body.classList.remove('scroll-lock'); // Удаление класса для разблокировки прокрутки
   });
 }));
+
+document.querySelector('.scroll-top-button').addEventListener('click', function() {
+  // Функция для плавной прокрутки страницы
+  function scrollToTop() {
+    if (window.scrollY !== 0) {
+      // Прокручиваем страницу на 10% от текущего положения
+      window.scrollBy(0, -window.scrollY * 0.1);
+      requestAnimationFrame(scrollToTop);
+    }
+  }
+
+  scrollToTop();
+});
