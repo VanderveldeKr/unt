@@ -1,0 +1,225 @@
+.container-drop {
+    position: relative;
+    overflow: hidden;
+}
+.container-drop::after {
+    content: '';
+    background-image: url(/image/home/a-drop-1x.png);
+    background-repeat: no-repeat;
+
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(30%);
+    z-index: -1;
+}
+.home {
+    width: 100%;
+    position: relative;
+}
+.home-wrapper {
+    padding-top: 62px;
+    padding-bottom: 69px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    position: relative;
+}
+.home__title-group {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+.title-style {
+    position: relative;
+}
+.title-style::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+
+
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, #008DDE 0%, #EB097B 53.13%, #571273 100%), #D9D9D9;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);    
+}
+.home-title, .title-block {
+    padding-left: 20px;
+
+    h2 {
+        font-size: 1.92em;
+        text-transform: uppercase;
+    }
+}
+.home-subtitle {
+    padding-left: 20px;
+
+    p {
+        font-weight: 400;
+        font-size: 1.16em;
+    }
+}
+.home__content-list {
+
+}
+.home-list {
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 45%;
+    li {
+        list-style-image: url(/image/icon/check.svg);
+        font-size: 1em;
+        font-weight: 400;
+    }
+}
+.list-item {
+}
+
+
+// supply-map
+.supply-map {
+    width: 100%;
+    padding-top: 120px;
+    padding-bottom: 30px;
+}
+.supply-map__wrapper {
+    position: relative;
+}
+.supply-map__title {
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.map__image-group {
+    width: 100%;
+    height: auto;
+}
+.supply-map__group-btn {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    gap: 12px;
+
+    bottom: 0;
+    left: 0;
+
+    p,a {
+        text-transform: uppercase;
+    }
+}
+.supply-map__btn {
+    background-color: #008DDE;
+    border-radius: 50px;
+    transition: .3s;
+    a {
+        display: block;
+        padding: 15px 44px;
+    }
+    &:hover {
+        background-color: #01588b;
+        transition: .3s;
+    }
+}
+// supply-map
+
+#map-container {
+    position: relative;
+    width: 100%; /* Для занимания всей доступной ширины */
+    min-width: 1200px;
+
+    
+    #russia-map {
+        width: 100%;
+    }
+
+    @keyframes pulse {
+        0% {
+            background-color: rgba(0, 141, 222, 0);
+        }
+        50% {
+            background-color: rgba(0, 141, 222, 0.4);
+        }
+        100% {
+            background-color: rgba(0, 141, 222, 0);
+        }
+    }
+
+    .tooltip {
+        position: absolute;
+        display: none;
+        transition: .5s;
+        /* Стили для блока всплывающей подсказки */
+    }
+
+    .star {
+        position: absolute;
+        width: 17px; /* Ширина и высота звездочек */
+        height: 17px;
+        background-image: url(/image/icon/star.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+    }
+    .tooltip {
+        width: 300px;
+        transform: translate(-100%, -100%);
+    }
+    /* Стили для каждой звездочки */
+    #star-1, #tooltip-1 {
+        top: 34.5%;
+        left: 43%;
+    }
+    #star-2, #tooltip-2 {
+        top: 38%;
+        left: 42%;
+    }
+    #star-3, #tooltip-3 {
+        top: 42.4%;
+        left: 40.2%;
+    }
+    #star-4, #tooltip-4 {
+        top: 40%;
+        left: 66.5%;
+    }
+    #finger {
+        width: 20px; /* Ширина и высота звездочек */
+        height: 20px;
+        background-image: url(/image/icon/finger.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+
+        position: absolute;
+        top: 43%;
+        right: 32.3%;
+    }
+    #star-5, #tooltip-5 {
+        top: 62%;
+        left: 59.5%;
+    }
+    #star-6, #tooltip-6 {
+        top: 68%;
+        left: 57.5%;
+    }
+    #star-7, #tooltip-7 {
+        top: 75%;
+        left: 54.7%;
+    }
+}

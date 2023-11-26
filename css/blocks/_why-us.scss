@@ -1,0 +1,49 @@
+.why-us {
+    width: 100%;
+    padding-top: 71px;
+    padding-bottom: 95px;
+
+    background-image: url(/image/why-us/background.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+}
+.why-us__wrapper {
+    word-wrap: 100%;
+}
+.why-us__title {
+}
+.why-us__content {
+    padding: 118px 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+}
+.why-us__card {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+.why-us__img {
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.why-us__text {
+    width: 55%;
+    p {
+        font-size: 1em;
+        text-transform: uppercase;
+    }
+}
+.catalog__btn {
+}
+.why-us_btn {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+
+    text-align: center;
+}
