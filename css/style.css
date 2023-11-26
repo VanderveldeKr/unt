@@ -211,7 +211,7 @@ body {
   left: 0;
   bottom: 0;
   right: 0;
-  background-image: url(/image/home/home-background-1x.png);
+  background-image: url(/unt/image/home/home-background-1x.png);
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -2;
@@ -296,7 +296,7 @@ body {
   max-width: 45%;
 }
 .home-list li {
-  list-style-image: url(../image/icon/check.svg);
+  list-style-image: url(/unt/image/icon/check.svg);
   font-size: 1em;
   font-weight: 400;
 }
@@ -383,7 +383,7 @@ body {
   position: absolute;
   width: 17px; /* Ширина и высота звездочек */
   height: 17px;
-  background-image: url(../image/icon/star.svg);
+  background-image: url(/unt/image/icon/star.svg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -412,7 +412,7 @@ body {
 #map-container #finger {
   width: 20px; /* Ширина и высота звездочек */
   height: 20px;
-  background-image: url(../image/icon/finger.png);
+  background-image: url(/unt/image/icon/finger.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -437,7 +437,7 @@ body {
 .catalog {
   padding-top: 78px;
   padding-bottom: 86px;
-  background-image: url(/image/catalog/background-1x.png);
+  background-image: url(/unt/image/catalog/background-1x.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -517,7 +517,7 @@ body {
   width: 100%;
   padding-top: 71px;
   padding-bottom: 95px;
-  background-image: url(/image/why-us/background.png);
+  background-image: url(/unt/image/why-us/background.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;
@@ -567,7 +567,7 @@ body {
   width: 100%;
   padding-top: 69px;
   padding-bottom: 80px;
-  background-image: url(/image/reviews/background.png);
+  background-image: url(/unt/image/reviews/background.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -671,7 +671,7 @@ body {
 }
 
 .container-footer-background {
-  background-image: url(/image/footer/background.png);
+  background-image: url(/unt/image/footer/background.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
