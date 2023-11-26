@@ -4,7 +4,7 @@
 }
 .container-drop::after {
     content: '';
-    background-image: url(/unt/image/home/a-drop-1x.png);
+    background-image: url(/image/home/a-drop-1x.png);
     background-repeat: no-repeat;
 
     width: 100%;
@@ -77,7 +77,7 @@
     gap: 20px;
     max-width: 45%;
     li {
-        list-style-image: url(/unt/image/icon/check.svg);
+        list-style-image: url(/image/icon/check.svg);
         font-size: 1em;
         font-weight: 400;
     }
@@ -170,7 +170,7 @@
         position: absolute;
         width: 17px; /* Ширина и высота звездочек */
         height: 17px;
-        background-image: url(/unt/image/icon/star.svg);
+        background-image: url(/image/icon/star.svg);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -200,7 +200,7 @@
     #finger {
         width: 20px; /* Ширина и высота звездочек */
         height: 20px;
-        background-image: url(/unt/image/icon/finger.png);
+        background-image: url(/image/icon/finger.png);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
