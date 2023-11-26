@@ -800,4 +800,373 @@ body {
   font-size: 0.66em;
   font-weight: 400;
   text-transform: capitalize;
+}
+
+.pop-up {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: transparent;
+  z-index: 5;
+  transform: translate(100%, -100%) scale(0);
+  transition: 0.5s ease-in-out;
+}
+
+.scroll-lock {
+  overflow: hidden;
+}
+
+.pop-up__container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.pop-up__body {
+  position: relative;
+  width: 500px;
+  height: 641px;
+  margin: auto;
+  padding: 35px 34px 21px 34px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 29px;
+}
+
+.pop-up__body-text {
+  color: #000000;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.pop-up__body-text h2 {
+  font-size: 0.75em;
+  font-weight: 700;
+}
+.pop-up__body-text p {
+  font-size: 0.7em;
+  font-weight: 400;
+}
+
+.pop-up__close {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  right: 35px;
+  top: 22px;
+  background-image: url(../image/icon/btn-close.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 15px 15px;
+  cursor: pointer;
+}
+
+.active-pop-up {
+  transform: translateY(0%) scale(100%);
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.form-contact {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-form {
+  background-color: #F5F5F5;
+  box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.25) inset;
+  padding: 15px 15px;
+  border-radius: 10px;
+}
+
+.form-contact label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  font-size: 0.8em;
+  color: #000000;
+}
+.form-contact label p {
+  margin-bottom: 5px;
+}
+.form-contact label span {
+  color: #008DDE;
+}
+
+input.input-form::-moz-placeholder {
+  color: rgb(0, 0, 0);
+  font-weight: 400;
+}
+
+input.input-form::placeholder {
+  color: rgb(0, 0, 0);
+  font-weight: 400;
+}
+
+textarea.input-form::-moz-placeholder {
+  color: rgb(0, 0, 0);
+  font-weight: 400;
+}
+
+textarea.input-form::placeholder {
+  color: rgb(0, 0, 0);
+  font-weight: 400;
+}
+
+.personality {
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: center;
+}
+.personality a {
+  color: #008DDE;
+}
+
+.personality label {
+  font-size: 0.5em;
+  font-weight: 400;
+  position: relative;
+  display: flex;
+}
+
+.personality input {
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+}
+
+.custom-checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.custom-checkbox + label {
+  display: flex;
+  flex-direction: row;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.custom-checkbox + label::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border-radius: 5px;
+  border: 2px solid #D7D7D7;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.custom-checkbox:checked + label::before {
+  background-color: #D7D7D7;
+  background-image: url(../image/icon/check-mark.svg);
+}
+
+/* стили при наведении курсора на checkbox */
+/* стили для активного состояния чекбокса (при нажатии на него) */
+.custom-checkbox:not(:disabled):active + label::before {
+  background-color: #D7D7D7;
+}
+
+/* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+.custom-checkbox:focus:not(:checked) + label::before {
+  border-color: #D7D7D7;
+}
+
+/* стили для чекбокса, находящегося в состоянии disabled */
+.custom-checkbox:disabled + label::before {
+  background-color: #e9ecef;
+}
+
+.form-btn {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 8px 10px;
+  background-color: #008DDE;
+  color: #FFF;
+  border-radius: 22px;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: 0.3s;
+}
+.form-btn:hover {
+  background-color: #01588b;
+  transition: 0.3s;
+}
+
+.popup {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.popup.is-active {
+  pointer-events: auto;
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup__content {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+@media (max-width: 576px) {
+  .popup__content {
+    padding-left: 30px;
+    padding-right: 20px;
+  }
+}
+.popup__wrapper {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.popup__inner {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 50px 0;
+}
+
+.popup__content {
+  background-image: linear-gradient(90deg, #CD00FA 20%, #651DDB 80%);
+  border-radius: 50px;
+  padding: 70px 20px;
+  max-width: 730px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.popup__content--fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.popup__content--centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-close {
+  position: relative;
+  border: none;
+  cursor: pointer;
+  background: none;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.btn-close:hover {
+  transform: scale(1.1);
+}
+
+.btn-close:active {
+  transform: scale(0.9);
+  opacity: 0.8;
+}
+
+.btn-close::before,
+.btn-close::after {
+  content: "";
+  background: #d2d2d2;
+  height: 40px;
+  width: 3px;
+  position: absolute;
+  border: 10px;
+  top: 50%;
+}
+
+.btn-close::before {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.btn-close::after {
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+.popup__btn-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.page-title {
+  font-size: 48px;
+  text-align: center;
+  margin: 0 auto 40px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  color: #fff;
+}
+
+.page-title--accent {
+  color: #ffa650;
+}
+
+@media (max-width: 576px) {
+  .page-title {
+    font-size: 36px;
+  }
+}
+.popup__title {
+  margin-bottom: 20px;
+}
+
+.popup__subtitle {
+  margin: 0;
+  text-align: center;
+  font-size: 24px;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+}
+
+.popup__subtitle--order {
+  max-width: 360px;
+  margin: 0 auto 40px;
+}
+
+@media screen and (max-width: 620px) {
+  .pop-up__body {
+    width: 100%;
+    height: auto;
+  }
+  .pop-up__body-text {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .pop-up__body-text h2 {
+    font-size: 22px;
+    line-height: 28px;
+  }
+  .pop-up__body-text p {
+    font-size: 14;
+    line-height: 16px;
+  }
 }/*# sourceMappingURL=style.css.map */
