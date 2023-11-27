@@ -45,9 +45,11 @@ const body = document.querySelector('body');
 openPopUp.forEach(b => b.addEventListener('click', function(e) {
   e.preventDefault();
   popUp.classList.add('active-pop-up');
+  body.classList.add('scroll-lock'); // Добавление класса для блокировки прокрутки
 
   closePopUp.addEventListener('click', () => {
     popUp.classList.remove('active-pop-up');
+    body.classList.remove('scroll-lock'); // Удаление класса для разблокировки прокрутки
   });
 }));
 
