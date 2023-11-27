@@ -34,4 +34,28 @@
     width: 20%;
 }
 
+@media (max-width: 800px) {
+    .trust-us__content {
+        margin: 25px 0;
+        border-radius: 10px;
+
+        padding: 20px 25px 30px 25px;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+    }
+    .trust-us__content-wrapper {
+        width: 80%;
+        transform: translateY(0);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+    .trust-us__content-container {
+        padding-top: 20px;
+    }
+}
+
 

@@ -1,22 +1,39 @@
 // Map
 const stars = [
-    { star: document.getElementById('star-1'), tooltip: document.getElementById('tooltip-1') },
-    { star: document.getElementById('star-2'), tooltip: document.getElementById('tooltip-2') },
-    { star: document.getElementById('star-3'), tooltip: document.getElementById('tooltip-3') },
-    { star: document.getElementById('star-4'), tooltip: document.getElementById('tooltip-4') },
-    { star: document.getElementById('star-5'), tooltip: document.getElementById('tooltip-5') },
-    { star: document.getElementById('star-6'), tooltip: document.getElementById('tooltip-6') },
-    { star: document.getElementById('star-7'), tooltip: document.getElementById('tooltip-7') }
-    ];
+  { star: document.getElementById('star-1'), tooltip: document.getElementById('tooltip-1') },
+  { star: document.getElementById('star-2'), tooltip: document.getElementById('tooltip-2') },
+  { star: document.getElementById('star-3'), tooltip: document.getElementById('tooltip-3') },
+  { star: document.getElementById('star-4'), tooltip: document.getElementById('tooltip-4') },
+  { star: document.getElementById('star-5'), tooltip: document.getElementById('tooltip-5') },
+  { star: document.getElementById('star-6'), tooltip: document.getElementById('tooltip-6') },
+  { star: document.getElementById('star-7'), tooltip: document.getElementById('tooltip-7') }
+];
 
-    stars.forEach(({ star, tooltip }) => {
-    star.addEventListener('mouseover', () => {
-        tooltip.style.display = 'block';
-    });
-    star.addEventListener('mouseout', () => {
-        tooltip.style.display = 'none';
-    });
-});        
+stars.forEach(({ star, tooltip }) => {
+  const screenWidth = window.innerWidth;
+
+  if (screenWidth <= 750) {
+      star.addEventListener('click', (event) => {
+          event.stopPropagation();
+          if (tooltip.style.display === 'block') {
+              tooltip.style.display = 'none';
+          } else {
+              tooltip.style.display = 'block';
+          }
+      });
+
+      document.addEventListener('click', () => {
+          tooltip.style.display = 'none';
+      });
+  } else {
+      star.addEventListener('mouseenter', () => {
+          tooltip.style.display = 'block';
+      });
+      star.addEventListener('mouseleave', () => {
+          tooltip.style.display = 'none';
+      });
+  }
+});     
 
 // PopUp
 const openPopUp = document.querySelectorAll('.open-pop-up');
@@ -47,3 +64,39 @@ document.querySelector('.scroll-top-button').addEventListener('click', function(
 
   scrollToTop();
 });
+
+// Функция для изменения пути изображений при достижении определенной ширины экрана
+function changeImagePaths() {
+  // Получаем текущую ширину экрана
+  const screenWidth = window.innerWidth;
+
+  // Проверяем, соответствует ли ширина экрана условию
+  if (screenWidth <= 800) {
+    // Получаем все элементы <img> с классом "tooltip"
+    const tooltips = document.getElementsByClassName("tooltip");
+
+    // Перебираем все элементы и изменяем пути изображений
+    for (let i = 0; i < tooltips.length; i++) {
+      const img = tooltips[i].querySelector("img");
+      const src = img.getAttribute("src");
+      const newSrc = src.replace("/map/", "/map/mobile/");
+      img.setAttribute("src", newSrc);
+    }
+  } else {
+    // Если ширина экрана больше 800, возвращаем пути изображений к исходному состоянию
+    const tooltips = document.getElementsByClassName("tooltip");
+
+    for (let i = 0; i < tooltips.length; i++) {
+      const img = tooltips[i].querySelector("img");
+      const src = img.getAttribute("src");
+      const newSrc = src.replace("/map/mobile/", "/map/");
+      img.setAttribute("src", newSrc);
+    }
+  }
+}
+
+// Вызываем функцию для первоначальной установки путей изображений
+changeImagePaths();
+
+// Слушаем изменения ширины окна и вызываем функцию при необходимости
+window.addEventListener("resize", changeImagePaths);

@@ -15,3 +15,29 @@
         max-width: 100%;
     }
 }
+.how-working__background-mobile {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    .how-working {
+        padding: 28px 0
+    }
+    .how-working__background {
+        display: none;
+    }
+    .how-working__background-mobile {
+        display: block;
+    }
+    .how-working__map {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+        margin-bottom: 41px;
+    }
+    .how-working__wrapper {
+        .catalog__btn {
+            margin-bottom: 28px;
+        }
+    }
+}

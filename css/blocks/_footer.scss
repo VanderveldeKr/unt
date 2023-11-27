@@ -137,3 +137,143 @@
         }
     }
 }
+
+
+@media (max-width: 800px)  {
+    .footer-wrapper {
+        padding-top: 10px;
+        padding-bottom: 19px;
+        gap: 10px;
+    }
+    .footer-contact__basis {
+        gap: 20px;
+    }
+    .footer-logo__wrapper {
+        gap: 29px;
+    }
+    .footer-logo {
+        max-width: 150px;
+        img {
+            max-width: 90%;
+        }
+    }
+    .footer-social--link {
+        padding-left: 10px;
+    
+        gap: 18px;
+    
+        p {
+            font-size: 12px;
+        }
+        ul {
+            justify-content:start;
+            gap: 19px;
+        }
+        .social {
+            width: 20px;
+        }
+    }
+
+    .footer-branches__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+    
+        .title {
+            font-size: 12px;
+        }  
+        .branches-group {
+            grid-template-columns: 1fr;
+            gap: 7px;
+        }
+        .branches-card {
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+            .city {
+                font-size: 10px;
+            }
+            .sub-sity {
+                font-size: 10px;
+            }
+            .street, .phone {
+                font-size: 10px;
+            }
+        }
+    }
+    
+    .footer-content__protection {
+        display: flex;
+        flex-direction: column;
+        gap: 93px;
+        align-items: center;
+        text-align: center;
+        .footer-contact {
+    
+        }
+        .footer-info {
+            display: flex;
+            flex-direction: column;
+            gap: 23px;
+            ul {
+    
+            }
+            li, a{
+                font-size: 7px;
+            }
+        }
+    }
+    
+}
+@media (max-width: 430px) {
+    .footer-wrapper {
+        grid-template-columns: 70% 30%;
+    }
+    .footer-logo img {
+        max-width: 70%;
+    }
+    .footer-contact__basis {
+        gap: 0;
+    }
+    .footer-social--link {
+        padding-left: 0;
+    }
+    .footer-branches__wrapper {
+        gap: 5px;
+    
+        .title {
+            font-size: 10px;
+        }  
+        .branches-group {
+            gap: 5px;
+        }
+        .branches-card {
+            .city {
+                font-size: 8px;
+            }
+            .sub-sity {
+                font-size: 8px;
+            }
+            .street, .phone {
+                font-size: 8px;
+            }
+        }
+    }
+    .footer-content__protection {
+        display: flex;
+        flex-direction: column;
+        gap: 93px;
+        align-items: center;
+        text-align: center;
+
+        .footer-info {
+            display: flex;
+            flex-direction: column;
+            gap: 23px;
+
+            li, a{
+                font-size: 6px;
+            }
+        }
+    }
+}

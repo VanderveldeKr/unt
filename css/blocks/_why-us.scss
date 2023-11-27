@@ -11,8 +11,6 @@
 .why-us__wrapper {
     word-wrap: 100%;
 }
-.why-us__title {
-}
 .why-us__content {
     padding: 118px 0;
     width: 100%;
@@ -46,4 +44,38 @@
     margin-top: 60px;
 
     text-align: center;
+}
+
+@media (max-width: 800px) {
+    .why-us {
+        padding-top: 34px;
+        padding-bottom: 21px;
+    }
+    .why-us__content {
+        padding: 27px 20px;
+        grid-template-columns: 1fr;
+        gap: 26px;
+    }
+    .why-us__card {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 28px;
+    }
+    .why-us__img {
+        width: 100%;
+        img {
+            width: 35%;
+        }
+    }
+    .why-us__text {
+        width: 100%;
+        p {
+            font-size: 12px;
+            text-align: center;
+        }
+    }
+    .why-us_btn {
+        margin-top: 0;
+    }
 }
