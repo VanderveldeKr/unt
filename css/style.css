@@ -207,6 +207,7 @@ body {
   }
   .button-group-list .footer-social--link ul {
     gap: 50px;
+    z-index: 50;
   }
   .scroll-top-button {
     width: 35px;
