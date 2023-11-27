@@ -1,5 +1,10 @@
 .header {
     width: 100%;
+    position: fixed;
+    z-index: 10;
+}
+.header-race {
+    background-color: #1a1c1ef2;
 }
 .header-wrapper {
     display: flex;
@@ -7,8 +12,7 @@
     align-items: center;
     gap: 10px;
 
-    padding-top: 28px;
-    padding-bottom: 15px;
+    padding: 15px 0;
 
     position: relative;
 
@@ -35,7 +39,7 @@
 .header-title {
     max-width: 100%;
     h1 {
-        font-size: 1.16em;
+        font-size: 1.3em;
         font-weight: 400;
     }
 }

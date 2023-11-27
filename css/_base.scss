@@ -57,9 +57,33 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
-    z-index: 999;
+    z-index: 25;
     transition: .3s;
     animation: pulse-red 2s infinite;
+  }
+
+  .button-group-list {
+    height: 73px;
+    position: fixed;
+    right: 6%;
+    bottom: 70px;
+    color: red;
+    z-index: 30;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    .footer-social--link {
+      gap: 10px;
+      background-color: #42ba07;
+      padding: 25px;
+      border-radius: 20px;
+    }
+  }
+  .call-bottom-button:hover + .button-group-list,
+  .button-group-list:hover {
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.4s ease;
   }
 
   @keyframes pulse-red {
@@ -78,4 +102,15 @@ body {
     .container {
       padding: 0 9px;
   }
+  .button-group-list {
+    .footer-social--link ul {
+      gap: 50px;
+    }
+  }
+  .scroll-top-button {
+
+    width: 35px;
+    height: 35px;
+    background-size: contain;
+}
 }

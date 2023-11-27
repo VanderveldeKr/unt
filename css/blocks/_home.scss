@@ -1,6 +1,7 @@
 .container-drop {
     position: relative;
     overflow: hidden;
+    padding-top: 160px;
 }
 .container-drop::after {
     content: '';
@@ -11,7 +12,7 @@
     height: 100%;
 
     position: absolute;
-    top: 0;
+    top: 160px;
     right: 0;
     transform: translateX(30%);
     z-index: -1;
@@ -78,7 +79,7 @@
     max-width: 45%;
     li {
         list-style-image: url(../image/icon/check.svg);
-        font-size: 1em;
+        font-size: 1.4em;
         font-weight: 400;
     }
 }
@@ -244,9 +245,14 @@
 }
 
 @media (max-width: 800px) {
+    .container-drop {
+        position: relative;
+        overflow: hidden;
+        padding-top: 80px;
+    }
     .container-drop::after {
         background-size: contain;  
-        top: 90px;
+        top: 160px;
         transform: none;
     }
     .home-wrapper {
@@ -385,6 +391,6 @@
 }
 @media(max-width: 400px) {
     .container-drop::after {
-        top: 150px;
+        top: 250px;
     }
 }

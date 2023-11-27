@@ -101,3 +101,53 @@ changeImagePaths();
 
 // Слушаем изменения ширины окна и вызываем функцию при необходимости
 window.addEventListener("resize", changeImagePaths);
+
+
+window.addEventListener('scroll', function() {
+  const header = document.querySelector('.header');
+  if (window.pageYOffset > 0) {
+    header.classList.add('header-race');
+  } else {
+    header.classList.remove('header-race');
+  }
+});
+
+const callBottomButton = document.querySelector('.call-bottom-button');
+const buttonGroupList = document.querySelector('.button-group-list');
+
+callBottomButton.addEventListener('mouseenter', function() {
+  buttonGroupList.style.opacity = '1';
+});
+
+buttonGroupList.addEventListener('mouseleave', function() {
+  buttonGroupList.style.opacity = '0';
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  var callBottomButton = document.querySelector('.call-bottom-button');
+  var buttonGroupList = document.querySelector('.button-group-list');
+  var isButtonGroupListOpen = false;
+
+  callBottomButton.addEventListener('click', function () {
+    if (isButtonGroupListOpen) {
+      buttonGroupList.style.opacity = '0';
+      isButtonGroupListOpen = false;
+    } else {
+      buttonGroupList.style.opacity = '1';
+      isButtonGroupListOpen = true;
+    }
+  });
+
+  buttonGroupList.addEventListener('transitionend', function () {
+    if (!isButtonGroupListOpen) {
+      buttonGroupList.style.pointerEvents = 'none';
+    }
+  });
+
+  window.addEventListener('resize', function () {
+    if (window.innerWidth >= 800) {
+      buttonGroupList.style.opacity = '0';
+      isButtonGroupListOpen = false;
+    }
+  });
+});

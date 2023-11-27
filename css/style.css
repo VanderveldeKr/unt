@@ -160,9 +160,34 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
-  z-index: 999;
+  z-index: 25;
   transition: 0.3s;
   animation: pulse-red 2s infinite;
+}
+
+.button-group-list {
+  height: 73px;
+  position: fixed;
+  right: 6%;
+  bottom: 70px;
+  color: red;
+  z-index: 30;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+.button-group-list .footer-social--link {
+  gap: 10px;
+  background-color: #42ba07;
+  padding: 25px;
+  border-radius: 20px;
+}
+
+.call-bottom-button:hover + .button-group-list,
+.button-group-list:hover {
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.4s ease;
 }
 
 @keyframes pulse-red {
@@ -180,9 +205,23 @@ body {
   .container {
     padding: 0 9px;
   }
+  .button-group-list .footer-social--link ul {
+    gap: 50px;
+  }
+  .scroll-top-button {
+    width: 35px;
+    height: 35px;
+    background-size: contain;
+  }
 }
 .header {
   width: 100%;
+  position: fixed;
+  z-index: 10;
+}
+
+.header-race {
+  background-color: rgba(26, 28, 30, 0.9490196078);
 }
 
 .header-wrapper {
@@ -190,8 +229,7 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 10px;
-  padding-top: 28px;
-  padding-bottom: 15px;
+  padding: 15px 0;
   position: relative;
 }
 .header-wrapper::after {
@@ -218,7 +256,7 @@ body {
   max-width: 100%;
 }
 .header-title h1 {
-  font-size: 1.16em;
+  font-size: 1.3em;
   font-weight: 400;
 }
 
@@ -314,6 +352,7 @@ body {
 .container-drop {
   position: relative;
   overflow: hidden;
+  padding-top: 160px;
 }
 
 .container-drop::after {
@@ -323,7 +362,7 @@ body {
   width: 100%;
   height: 100%;
   position: absolute;
-  top: 0;
+  top: 160px;
   right: 0;
   transform: translateX(30%);
   z-index: -1;
@@ -391,7 +430,7 @@ body {
 }
 .home-list li {
   list-style-image: url(../image/icon/check.svg);
-  font-size: 1em;
+  font-size: 1.4em;
   font-weight: 400;
 }
 
@@ -550,9 +589,14 @@ body {
 }
 
 @media (max-width: 800px) {
+  .container-drop {
+    position: relative;
+    overflow: hidden;
+    padding-top: 80px;
+  }
   .container-drop::after {
     background-size: contain;
-    top: 90px;
+    top: 160px;
     transform: none;
   }
   .home-wrapper {
@@ -675,7 +719,7 @@ body {
 }
 @media (max-width: 400px) {
   .container-drop::after {
-    top: 150px;
+    top: 250px;
   }
 }
 .catalog {
@@ -1319,7 +1363,7 @@ body {
   left: 0;
   top: 0;
   background-color: transparent;
-  z-index: 5;
+  z-index: 15;
   transform: translate(100%, -100%) scale(0);
   transition: 0.5s ease-in-out;
 }
