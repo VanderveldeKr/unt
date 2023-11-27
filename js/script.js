@@ -10,7 +10,8 @@ const stars = [
 ];
 
 stars.forEach(({ star, tooltip }) => {
-  const screenWidth = window.innerWidth;
+  // const screenWidth = window.innerWidth;
+  const screenWidth = document.documentElement.clientWidth;
 
   if (screenWidth <= 750) {
       star.addEventListener('click', (event) => {
