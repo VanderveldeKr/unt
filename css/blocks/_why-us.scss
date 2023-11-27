@@ -79,3 +79,12 @@
         margin-top: 0;
     }
 }
+@media (max-width: 430px) {
+    .why-us {
+        .catalog__btn {
+            a {
+                font-size: 8px;
+            }
+        }
+    }
+} 
