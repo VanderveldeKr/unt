@@ -130,17 +130,3 @@ buttonGroupList.addEventListener('transitionend', function() {
   }
 });
 
-function DisablePinchZoom() 
-{
-    $('meta[name=viewport]').attr("content", "");
-    $('meta[name=viewport]').attr("content", "width=yourwidth, user-scalable=no");
-}
-
-function myFunction() 
-{
-    $('meta[name=viewport]').attr("content", "width=1047, user-scalable=yes");
-}
-
-
-<select id="cmbYo" onchange="javascript: myFunction();" onclick="javascript: DisablePinchZoom();">
-</select>
