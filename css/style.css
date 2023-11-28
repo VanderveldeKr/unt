@@ -224,6 +224,22 @@ body {
 .header-race {
   background-color: rgba(26, 28, 30, 0.9490196078);
 }
+.header-race .header-wrapper {
+  padding: 0;
+}
+.header-race .header-logo {
+  height: auto;
+}
+.header-race .header-logo img {
+  width: calc(100px + 82 * (100vw - 950px) / 692);
+  height: auto;
+}
+.header-race .header-button a {
+  padding: 5px 10px;
+}
+.header-race .header-button a img {
+  width: calc(20px + 12 * (100vw - 950px) / 692);
+}
 
 .header-wrapper {
   display: flex;

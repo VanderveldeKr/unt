@@ -5,6 +5,26 @@
 }
 .header-race {
     background-color: #1a1c1ef2;
+
+    .header-wrapper {
+        padding: 0;
+    }
+    .header-logo {
+        height: auto;
+        img {
+            width: calc(100px + 82 * (100vw - 950px) / 692);
+            height: auto;
+        }
+    }
+    .header-button {
+        a {
+            padding: 5px 10px;
+    
+            img {
+                width: calc(20px + 12 * (100vw - 950px) / 692);
+            }
+        }
+    }
 }
 .header-wrapper {
     display: flex;
