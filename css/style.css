@@ -1156,9 +1156,11 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 25px;
+    text-align: center;
   }
   .trust-us__content-container {
     width: 100%;
+    text-align: center;
   }
 }
 .container-footer-background {
