@@ -122,11 +122,6 @@
     .header-wrapper {
         padding-top: 15px;
     }
-    .header-logo {
-        img {
-            max-width: 100px;
-        }
-    }
     .header-title {
         max-width: 100%;
         h1 {
@@ -141,6 +136,30 @@
     }
     .header-button {
         display: none;
+    }
+
+    .header-race {
+        background-color: #1a1c1ef2;
+    
+        .header-wrapper {
+            padding: 15px 0;
+        }
+        .header-logo {
+            height: auto;
+            img {
+                width: calc(150px + 82 * (100vw - 950px) / 692);
+                height: auto;
+            }
+        }
+        .header-button {
+            a {
+                padding: 5px 10px;
+        
+                img {
+                    width: calc(20px + 12 * (100vw - 950px) / 692);
+                }
+            }
+        }
     }
 }
 @media (max-width: 430px) {
