@@ -71,25 +71,19 @@ function changeImagePaths() {
   // Получаем текущую ширину экрана
   const screenWidth = window.innerWidth;
 
-  // Проверяем, соответствует ли ширина экрана условию
-  if (screenWidth <= 800) {
-    // Получаем все элементы <img> с классом "tooltip"
-    const tooltips = document.getElementsByClassName("tooltip");
+  // Получаем все элементы <img> с классом "tooltip"
+  const tooltips = document.getElementsByClassName("tooltip");
 
-    // Перебираем все элементы и изменяем пути изображений
-    for (let i = 0; i < tooltips.length; i++) {
-      const img = tooltips[i].querySelector("img");
-      const src = img.getAttribute("src");
+  // Перебираем все элементы и изменяем пути изображений
+  for (let i = 0; i < tooltips.length; i++) {
+    const img = tooltips[i].querySelector("img");
+    const src = img.getAttribute("src");
+
+    // Проверяем, соответствует ли ширина экрана условию
+    if (screenWidth <= 800) {
       const newSrc = src.replace("/map/", "/map/mobile/");
       img.setAttribute("src", newSrc);
-    }
-  } else {
-    // Если ширина экрана больше 800, возвращаем пути изображений к исходному состоянию
-    const tooltips = document.getElementsByClassName("tooltip");
-
-    for (let i = 0; i < tooltips.length; i++) {
-      const img = tooltips[i].querySelector("img");
-      const src = img.getAttribute("src");
+    } else {
       const newSrc = src.replace("/map/mobile/", "/map/");
       img.setAttribute("src", newSrc);
     }
@@ -99,7 +93,7 @@ function changeImagePaths() {
 // Вызываем функцию для первоначальной установки путей изображений
 changeImagePaths();
 
-// Слушаем изменения ширины окна и вызываем функцию при необходимости
+// Слушаем изменения ширины окна и вызываем функцию при каждом изменении
 window.addEventListener("resize", changeImagePaths);
 
 
