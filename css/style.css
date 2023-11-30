@@ -335,15 +335,36 @@ body {
 }
 
 @media (max-width: 800px) {
+  .header-logo {
+    width: 250px;
+    height: auto;
+  }
+  .header-logo img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  .header-contacts {
+    display: none;
+  }
+  .header-contacts__mobile {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
   .header-wrapper {
     padding-top: 15px;
-    gap: 5px;
+    gap: 0;
   }
   .header-title {
     max-width: 100%;
   }
   .header-title h1 {
-    font-size: 12px;
+    font-size: 14px;
+  }
+  .header-title h1 br {
+    display: none;
   }
   .header-phone {
     font-size: 10px;
@@ -361,10 +382,12 @@ body {
     padding: 15px 0;
   }
   .header-race .header-logo {
+    width: 250px;
     height: auto;
   }
   .header-race .header-logo img {
-    width: calc(150px + 82 * (100vw - 950px) / 692);
+    width: 100%;
+    max-width: 100%;
     height: auto;
   }
   .header-race .header-button a {
@@ -374,15 +397,15 @@ body {
     width: calc(20px + 12 * (100vw - 950px) / 692);
   }
 }
-@media (max-width: 470px) {
-  .header-contacts {
-    display: none;
+@media (max-width: 420px) {
+  .header-title {
+    max-width: 100%;
   }
-  .header-contacts__mobile {
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  .header-title h1 {
+    font-size: 10px;
+  }
+  .header-title h1 br {
+    display: none;
   }
 }
 .container-drop {
@@ -628,7 +651,7 @@ body {
   .container-drop {
     position: relative;
     overflow: hidden;
-    padding-top: 80px;
+    padding-top: 100px;
   }
   .container-drop::after {
     background-size: contain;
