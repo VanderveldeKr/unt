@@ -73,10 +73,12 @@
 .header-phone {
     font-size: 1.16em;
     font-weight: 700;
+    color: #008DDE;
 }
 .header-mail {
     font-size: 1.12em;
     font-weight: 400;
+    color: #008DDE;
 }
 .header-button {
     background-color: #008DDE;
@@ -121,18 +123,19 @@
 @media (max-width: 800px) {
     .header-wrapper {
         padding-top: 15px;
+        gap: 5px;
     }
     .header-title {
         max-width: 100%;
         h1 {
-            font-size: 8px;
+            font-size:12px;
         }
     }
     .header-phone {
-        font-size: 8px;
+        font-size: 10px;
     }
     .header-mail {
-        font-size: 8px;
+        font-size: 10px;
     }
     .header-button {
         display: none;
@@ -162,7 +165,7 @@
         }
     }
 }
-@media (max-width: 430px) {
+@media (max-width: 470px) {
     .header-contacts {
         display: none;
     }
