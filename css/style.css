@@ -367,10 +367,12 @@ body {
     display: none;
   }
   .header-phone {
-    font-size: 10px;
+    font-size: 14px;
+    font-weight: 600;
   }
   .header-mail {
-    font-size: 10px;
+    font-size: 14px;
+    font-weight: 600;
   }
   .header-button {
     display: none;
@@ -886,7 +888,7 @@ body {
   }
   .catalog__btn a {
     text-transform: uppercase;
-    padding: 8px 14px;
+    padding: 13px 17px;
     display: block;
     background: #008DDE;
     border-radius: 30px;
