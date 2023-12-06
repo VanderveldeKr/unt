@@ -156,9 +156,10 @@ body {
   right: 7%;
   bottom: 60px;
   border-radius: 50%;
-  background-image: url(../image/icon/call-fix.svg);
+  background-image: url(../image/icon/red-call.png);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   cursor: pointer;
   z-index: 25;
   transition: 0.3s;
@@ -169,7 +170,7 @@ body {
   height: 73px;
   position: fixed;
   right: 6%;
-  bottom: 70px;
+  bottom: 30%;
   color: red;
   z-index: 30;
   opacity: 0;
@@ -178,9 +179,30 @@ body {
 }
 .button-group-list .footer-social--link {
   gap: 10px;
-  background-color: #42ba07;
+  background-color: #fff;
   padding: 25px;
   border-radius: 20px;
+}
+.button-group-list .footer-social--link ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.button-group-list .footer-social--link li {
+  display: flex;
+  gap: 20px;
+  justify-content: start;
+}
+.button-group-list .footer-social--link p {
+  color: #000;
+  font-size: 28px;
+  font-weight: 400;
+}
+.button-group-list .footer-social--link img {
+  width: 64px;
+  height: 64px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .call-bottom-button:hover + .button-group-list,
@@ -192,26 +214,80 @@ body {
 
 @keyframes pulse-red {
   0% {
-    box-shadow: 0 0 0 0 rgba(85, 255, 0, 0.6980392157);
+    box-shadow: 0 0 0 0 #E4032E;
   }
   80% {
-    box-shadow: 0 0 0 10px rgba(28, 180, 255, 0);
+    box-shadow: 0 0 0 20px rgba(28, 180, 255, 0);
   }
   100% {
     box-shadow: 0 0 0 0 rgba(28, 180, 255, 0);
   }
 }
+.call-bottom-button__dubble {
+  width: 100px;
+  height: 100px;
+  right: 16%;
+}
+
 @media (max-width: 800px) {
+  .call-bottom-button, .call-bottom-button__dubble {
+    width: 45px;
+    height: 45px;
+  }
+  .call-bottom-button__dubble {
+    right: 30%;
+  }
+  .button-group-list {
+    height: auto;
+    width: 200px;
+    position: fixed;
+    right: 3%;
+    bottom: 2%;
+    color: red;
+    z-index: 30;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+  }
+  .button-group-list .footer-social--link {
+    gap: 5px;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 20px;
+  }
+  .button-group-list .footer-social--link ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 50;
+  }
+  .button-group-list .footer-social--link li {
+    width: 100%;
+    display: flex;
+    gap: 5px;
+    justify-content: start;
+  }
+  .button-group-list .footer-social--link p {
+    color: #000;
+    font-size: 12px;
+    font-weight: 400;
+  }
+  .button-group-list .footer-social--link img {
+    width: 35px;
+    height: 35px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
   .container {
     padding: 0 9px;
   }
-  .button-group-list .footer-social--link ul {
-    gap: 50px;
-    z-index: 50;
-  }
   .scroll-top-button {
-    width: 35px;
-    height: 35px;
+    display: block;
+    right: 3%;
+    bottom: 12px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
     background-size: contain;
   }
 }
