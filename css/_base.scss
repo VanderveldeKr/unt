@@ -37,7 +37,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
-    z-index: 999;
+    z-index: 30;
     transition: .3s;
 
     &:hover {
@@ -58,7 +58,7 @@ body {
     background-position: center;
     background-size: cover;
     cursor: pointer;
-    z-index: 25;
+    z-index: 30;
     transition: .3s;
     animation: pulse-red 2s infinite;
   }
@@ -66,8 +66,8 @@ body {
   .button-group-list {
     height: 73px;
     position: fixed;
-    right: 6%;
-    bottom: 30%;
+    right: 1%;
+    bottom: 21%;
     color: red;
     z-index: 30;
     opacity: 0;
@@ -76,7 +76,7 @@ body {
     .footer-social--link {
       gap: 10px;
       background-color: #fff;
-      padding: 25px;
+      padding: 15px;
       border-radius: 20px;
       ul {
         display: flex;
@@ -90,12 +90,12 @@ body {
       }
       p {
         color: #000;
-        font-size: 28px;
+        font-size: 18px;
         font-weight: 400;
       }
       img {
-        width: 64px;
-        height: 64px;
+        width: 48px;
+        height: 48px;
         object-fit: cover;
       }
     }
