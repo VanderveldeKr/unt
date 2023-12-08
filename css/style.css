@@ -156,21 +156,22 @@ body {
   right: 7%;
   bottom: 60px;
   border-radius: 50%;
-  background-image: url(../image/icon/red-call.png);
+  background-image: url(../image/icon/red-call.svg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: 102%;
   cursor: pointer;
   z-index: 30;
   transition: 0.3s;
   animation: pulse-red 2s infinite;
+  background-color: #fff;
 }
 
 .button-group-list {
   height: 73px;
   position: fixed;
   right: 1%;
-  bottom: 21%;
+  bottom: 12%;
   color: red;
   z-index: 30;
   opacity: 0;
@@ -186,21 +187,21 @@ body {
 .button-group-list .footer-social--link ul {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
 }
 .button-group-list .footer-social--link li {
   display: flex;
-  gap: 20px;
+  gap: 10px;
   justify-content: start;
 }
-.button-group-list .footer-social--link p {
+.button-group-list .footer-social--link a {
   color: #000;
   font-size: 18px;
   font-weight: 400;
 }
 .button-group-list .footer-social--link img {
-  width: 48px;
-  height: 48px;
+  width: 32px;
+  height: 32px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -223,26 +224,17 @@ body {
     box-shadow: 0 0 0 0 rgba(28, 180, 255, 0);
   }
 }
-.call-bottom-button__dubble {
-  width: 100px;
-  height: 100px;
-  right: 16%;
-}
-
 @media (max-width: 800px) {
-  .call-bottom-button, .call-bottom-button__dubble {
+  .call-bottom-button {
     width: 45px;
     height: 45px;
-  }
-  .call-bottom-button__dubble {
-    right: 30%;
   }
   .button-group-list {
     height: auto;
     width: 200px;
     position: fixed;
-    right: 3%;
-    bottom: 2%;
+    right: 5%;
+    bottom: 1%;
     color: red;
     z-index: 30;
     opacity: 0;
@@ -267,7 +259,7 @@ body {
     gap: 5px;
     justify-content: start;
   }
-  .button-group-list .footer-social--link p {
+  .button-group-list .footer-social--link a {
     color: #000;
     font-size: 12px;
     font-weight: 400;
@@ -1777,7 +1769,7 @@ textarea.input-form::placeholder {
 }
 
 .popup__content {
-  background-image: linear-gradient(90deg, #CD00FA 20%, #651DDB 80%);
+  background-image: linear-gradient(90deg, #262427 20%, #008DDE 80%);
   border-radius: 50px;
   padding: 70px 20px;
   max-width: 730px;
@@ -1855,11 +1847,6 @@ textarea.input-form::placeholder {
   color: #ffa650;
 }
 
-@media (max-width: 576px) {
-  .page-title {
-    font-size: 36px;
-  }
-}
 .popup__title {
   margin-bottom: 20px;
 }
@@ -1878,6 +1865,21 @@ textarea.input-form::placeholder {
   margin: 0 auto 40px;
 }
 
+@media (max-width: 576px) {
+  .page-title {
+    font-size: 28px;
+  }
+  .popup__content {
+    padding: 20px 30px;
+  }
+  .popup__subtitle {
+    font-size: 18px;
+  }
+  .btn-close::before, .btn-close::after {
+    top: 0;
+    height: 20px;
+  }
+}
 @media (max-width: 800px) {
   .pop-up__body {
     height: 641px;

@@ -9,7 +9,6 @@
 <body>
     <button class="scroll-top-button"></button>
     <button class="call-bottom-button"></button>
-    <button style="background-image:url('./image/icon/call-btn-two.svg')" class="call-bottom-button call-bottom-button__dubble"></button>
     <div class="button-group-list">
         <div class="footer-social--link">
             <ul>
@@ -17,19 +16,19 @@
                     <a href="">
                         <img src="./image/icon/call-ul.svg" alt="">                                         
                     </a>
-                    <p>Позвонить нам</p>
+                    <a href="">Позвонить нам</a>
                 </li>
                 <li class="social">
                     <a href="">
                         <img src="./image/icon/wh-ul.svg" alt="">                                         
                      </a>
-                     <p>Написать в whatsapp</p>
+                     <a href="">Написать в whatsapp</a>
                 </li>
                 <li class="social">
                     <a href="">
                         <img src="./image/icon/tg-ul.svg" alt="">                                         
                     </a>
-                    <p>Написать в telegram</p>
+                    <a href="">Написать в telegram</a>
                 </li>
             </ul>
             <!-- <ul class="header-contacts__mobile">
@@ -45,7 +44,26 @@
             <div class="container">
                 <div class="header-wrapper">
                     <div class="header-logo">
-                        <a href=""><img src="./image/logo-1-x.png" srcset="./image/logo-2x.png" alt="Логотип УралНефтеТранс"></a>                     
+                        <a href="">
+                            <picture>
+                                <!-- Изображение для Retina и WebP -->
+                                <source
+                                    media="(min-resolution: 2dppx)"
+                                    srcset="./image/logo-2x.webp"
+                                    type="image/webp"
+                                >
+                                <!-- Изображение в формате WebP (без Retina) -->
+                                <source
+                                    srcset="./image/logo-1-x.webp"
+                                    type="image/webp"
+                                >
+                                <!-- Обычное изображение (без Retina и WebP) -->
+                                <img
+                                    src="./image/logo-1-x.png"
+                                    alt="Логотип УралНефтеТранс"
+                                >
+                            </picture>
+                        </a>                     
                     </div>
                     <div class="header-title">
                         <h1>Производство и поставки буровых растворов <br> для компаний нефтегазовой отрасли</h1>
@@ -100,7 +118,25 @@
                             <h2>Карта наших поставок на <br> месторождения</h2>
                         </div>
                         <div id="map-container">
-                            <img id="russia-map" src="./image/Frame 3.png" alt="">
+                            <picture id="russia-map">
+                                <!-- Изображение для Retina и WebP -->
+                                <source
+                                    media="(min-resolution: 2dppx)"
+                                    srcset="./image/home/map-2x.webp"
+                                    type="image/webp"
+                                >
+                                <!-- Изображение в формате WebP (без Retina) -->
+                                <source
+                                    srcset="./image/home/map-1x.webp"
+                                    type="image/webp"
+                                >
+                                <!-- Обычное изображение (без Retina и WebP) -->
+                                <img
+                                    src="./image/home/map-1x.png"
+                                    alt="Фото Карта"
+                                    loading="lazy"
+                                >
+                            </picture>
                             <div class="tooltip" id="tooltip-1">
                                 <img src="./image/map/one.svg" alt="">
                             </div>
@@ -136,7 +172,7 @@
                         <div class="supply-map__subtitle">
                             <p>расчет на буровые растворы</p>
                             <div class="catalog__btn">
-                                <a class="open-pop-up" href="">заказать</a>
+                                <a class="open-pop-up-two" id="" href="">заказать</a>
                             </div>        
                         </div>                  
                     </div>
@@ -156,7 +192,25 @@
                     <div class="catalog__group-card">
                         <div class="catalog-card">
                             <div class="catalog-card__img">
-                                <img src="./image/catalog/card-1-1x.png" srcset="./image/catalog/card-1-2x.png" alt="">
+                                <picture>
+                                    <!-- Изображение для Retina и WebP -->
+                                    <source
+                                        media="(min-resolution: 2dppx)"
+                                        srcset="./image/catalog/card-1-2x.webp"
+                                        type="image/webp"
+                                    >
+                                    <!-- Изображение в формате WebP (без Retina) -->
+                                    <source
+                                        srcset="./image/catalog/card-1-1x.webp"
+                                        type="image/webp"
+                                    >
+                                    <!-- Обычное изображение (без Retina и WebP) -->
+                                    <img
+                                        src="./image/catalog/card-1-1x.png"
+                                        alt="Фото продукции"
+                                        loading="lazy"
+                                    >
+                                </picture>
                             </div>
                             <div class="title-style"></div>
                             <div class="catalog-card__title">
@@ -165,7 +219,25 @@
                         </div>
                         <div class="catalog-card">
                             <div class="catalog-card__img">
-                                <img src="./image/catalog/card-2-1x.png" srcset="./image/catalog/card-2-2x.png" alt="">
+                                <picture>
+                                    <!-- Изображение для Retina и WebP -->
+                                    <source
+                                        media="(min-resolution: 2dppx)"
+                                        srcset="./image/catalog/card-2-2x.webp"
+                                        type="image/webp"
+                                    >
+                                    <!-- Изображение в формате WebP (без Retina) -->
+                                    <source
+                                        srcset="./image/catalog/card-2-1x.webp"
+                                        type="image/webp"
+                                    >
+                                    <!-- Обычное изображение (без Retina и WebP) -->
+                                    <img
+                                        src="./image/catalog/card-2-1x.png"
+                                        alt="Фото продукции"
+                                        loading="lazy"
+                                    >
+                                </picture>
                             </div>
                             <div class="title-style"></div>
                             <div class="catalog-card__title">
@@ -174,7 +246,25 @@
                         </div>
                         <div class="catalog-card">
                             <div class="catalog-card__img">
-                                <img src="./image/catalog/card-3-1x.png" srcset="./image/catalog/card-3-2x.png" alt="">
+                                <picture>
+                                    <!-- Изображение для Retina и WebP -->
+                                    <source
+                                        media="(min-resolution: 2dppx)"
+                                        srcset="./image/catalog/card-3-2x.webp"
+                                        type="image/webp"
+                                    >
+                                    <!-- Изображение в формате WebP (без Retina) -->
+                                    <source
+                                        srcset="./image/catalog/card-3-1x.webp"
+                                        type="image/webp"
+                                    >
+                                    <!-- Обычное изображение (без Retina и WebP) -->
+                                    <img
+                                        src="./image/catalog/card-3-1x.png"
+                                        alt="Фото продукции"
+                                        loading="lazy"
+                                    >
+                                </picture>
                             </div>
                             <div class="title-style"></div>
                             <div class="catalog-card__title">
@@ -183,7 +273,25 @@
                         </div>
                         <div class="catalog-card">
                             <div class="catalog-card__img">
-                                <img src="./image/catalog/card-4-1x.png" srcset="./image/catalog/card-4-2x.png" alt="">
+                                <picture>
+                                    <!-- Изображение для Retina и WebP -->
+                                    <source
+                                        media="(min-resolution: 2dppx)"
+                                        srcset="./image/catalog/card-4-2x.webp"
+                                        type="image/webp"
+                                    >
+                                    <!-- Изображение в формате WebP (без Retina) -->
+                                    <source
+                                        srcset="./image/catalog/card-4-1x.webp"
+                                        type="image/webp"
+                                    >
+                                    <!-- Обычное изображение (без Retina и WebP) -->
+                                    <img
+                                        src="./image/catalog/card-4-1x.png"
+                                        alt="Фото продукции"
+                                        loading="lazy"
+                                    >
+                                </picture>
                             </div>
                             <div class="title-style"></div>
                             <div class="catalog-card__title">
@@ -192,7 +300,25 @@
                         </div>
                         <div class="catalog-card">
                             <div class="catalog-card__img">
-                                <img src="./image/catalog/card-5-1x.png" srcset="./image/catalog/card-5-2x.png" alt="">
+                                <picture>
+                                    <!-- Изображение для Retina и WebP -->
+                                    <source
+                                        media="(min-resolution: 2dppx)"
+                                        srcset="./image/catalog/card-5-2x.webp"
+                                        type="image/webp"
+                                    >
+                                    <!-- Изображение в формате WebP (без Retina) -->
+                                    <source
+                                        srcset="./image/catalog/card-5-1x.webp"
+                                        type="image/webp"
+                                    >
+                                    <!-- Обычное изображение (без Retina и WebP) -->
+                                    <img
+                                        src="./image/catalog/card-5-1x.png"
+                                        alt="Фото продукции"
+                                        loading="lazy"
+                                    >
+                                </picture>
                             </div>
                             <div class="title-style"></div>
                             <div class="catalog-card__title">
@@ -201,7 +327,25 @@
                         </div>
                         <div class="catalog-card">
                             <div class="catalog-card__img">
-                                <img src="./image/catalog/card-6-1x.png" srcset="./image/catalog/card-6-2x.png" alt="">
+                                <picture>
+                                    <!-- Изображение для Retina и WebP -->
+                                    <source
+                                        media="(min-resolution: 2dppx)"
+                                        srcset="./image/catalog/card-6-2x.webp"
+                                        type="image/webp"
+                                    >
+                                    <!-- Изображение в формате WebP (без Retina) -->
+                                    <source
+                                        srcset="./image/catalog/card-6-1x.webp"
+                                        type="image/webp"
+                                    >
+                                    <!-- Обычное изображение (без Retina и WebP) -->
+                                    <img
+                                        src="./image/catalog/card-6-1x.png"
+                                        alt="Фото продукции"
+                                        loading="lazy"
+                                    >
+                                </picture>
                             </div>
                             <div class="title-style"></div>
                             <div class="catalog-card__title">
@@ -210,7 +354,25 @@
                         </div>
                         <div class="catalog-card">
                             <div class="catalog-card__img">
-                                <img src="./image/catalog/card-7-1x.png" srcset="./image/catalog/card-7-2x.png" alt="">
+                                <picture>
+                                    <!-- Изображение для Retina и WebP -->
+                                    <source
+                                        media="(min-resolution: 2dppx)"
+                                        srcset="./image/catalog/card-7-2x.webp"
+                                        type="image/webp"
+                                    >
+                                    <!-- Изображение в формате WebP (без Retina) -->
+                                    <source
+                                        srcset="./image/catalog/card-7-1x.webp"
+                                        type="image/webp"
+                                    >
+                                    <!-- Обычное изображение (без Retina и WebP) -->
+                                    <img
+                                        src="./image/catalog/card-7-1x.png"
+                                        alt="Фото продукции"
+                                        loading="lazy"
+                                    >
+                                </picture>
                             </div>
                             <div class="title-style"></div>
                             <div class="catalog-card__title">
@@ -219,7 +381,25 @@
                         </div>
                         <div class="catalog-card">
                             <div class="catalog-card__img">
-                                <img src="./image/catalog/card-8-1x.png" srcset="./image/catalog/card-8-2x.png" alt="">
+                                <picture>
+                                    <!-- Изображение для Retina и WebP -->
+                                    <source
+                                        media="(min-resolution: 2dppx)"
+                                        srcset="./image/catalog/card-8-2x.webp"
+                                        type="image/webp"
+                                    >
+                                    <!-- Изображение в формате WebP (без Retina) -->
+                                    <source
+                                        srcset="./image/catalog/card-8-1x.webp"
+                                        type="image/webp"
+                                    >
+                                    <!-- Обычное изображение (без Retina и WebP) -->
+                                    <img
+                                        src="./image/catalog/card-8-1x.png"
+                                        alt="Фото продукции"
+                                        loading="lazy"
+                                    >
+                                </picture>
                             </div>
                             <div class="title-style"></div>
                             <div class="catalog-card__title">
@@ -290,12 +470,48 @@
                     </div>
                     <div class="reviews-content">
                         <div class="reviews-card">
-                            <img src="./image/reviews/1-1x.png" srcset="./image/reviews/1-2x.png" alt="Фото отзыва">
-                            <a href="">перейти к отзывам</a>
+                            <picture>
+                                <!-- Изображение для Retina и WebP -->
+                                <source
+                                    media="(min-resolution: 2dppx)"
+                                    srcset="./image/reviews/1-2x.webp"
+                                    type="image/webp"
+                                >
+                                <!-- Изображение в формате WebP (без Retina) -->
+                                <source
+                                    srcset="./image/reviews/1-1x.webp"
+                                    type="image/webp"
+                                >
+                                <!-- Обычное изображение (без Retina и WebP) -->
+                                <img
+                                    src="./image/reviews/1-1x.png"
+                                    alt="Фото отзыва"
+                                    loading="lazy"
+                                >
+                            </picture>
+                            <a target="_blank" href="https://yandex.ru/maps/org/uralneftetrans/136549278151/reviews/?ll=55.975534%2C54.706672&z=16">перейти к отзывам</a>
                         </div>
                         <div class="reviews-card">
-                            <img src="./image/reviews/2-1x.png" srcset="./image/reviews/2-2x.png" alt="Фото отзыва">
-                            <a href="">перейти к отзывам</a>
+                            <picture>
+                                <!-- Изображение для Retina и WebP -->
+                                <source
+                                    media="(min-resolution: 2dppx)"
+                                    srcset="./image/reviews/2-2x.webp"
+                                    type="image/webp"
+                                >
+                                <!-- Изображение в формате WebP (без Retina) -->
+                                <source
+                                    srcset="./image/reviews/2-1x.webp"
+                                    type="image/webp"
+                                >
+                                <!-- Обычное изображение (без Retina и WebP) -->
+                                <img
+                                    src="./image/reviews/2-1x.png"
+                                    alt="Фото отзыва"
+                                    loading="lazy"
+                                >
+                            </picture>
+                            <a target="_blank" href="https://www.unthim.ru/reviews">перейти к отзывам</a>
                         </div>
                     </div>
                 </div>
@@ -334,25 +550,133 @@
                     <div class="trust-us__content">
                             <div class="trust-us__content-wrapper">
                                 <div class="trust-us__img trust-us__img-gaz">
-                                    <img src="./image/trust-us/1-1x.png" srcset="./image/trust-us/1-2x.png" alt="Газпром">
+                                    <picture>
+                                        <!-- Изображение для Retina и WebP -->
+                                        <source
+                                            media="(min-resolution: 2dppx)"
+                                            srcset="./image/trust-us/1-2x.webp"
+                                            type="image/webp"
+                                        >
+                                        <!-- Изображение в формате WebP (без Retina) -->
+                                        <source
+                                            srcset="./image/trust-us/1-1x.webp"
+                                            type="image/webp"
+                                        >
+                                        <!-- Обычное изображение (без Retina и WebP) -->
+                                        <img
+                                            src="./image/trust-us/1-1x.png"
+                                            alt="Логотип Газпром"
+                                            loading="lazy"
+                                        >
+                                    </picture>
                                 </div>
                                 <div class="trust-us__img">
-                                    <img src="./image/trust-us/3-1x.png" srcset="./image/trust-us/3-2x.png" alt="Эфко">
+                                    <picture>
+                                        <!-- Изображение для Retina и WebP -->
+                                        <source
+                                            media="(min-resolution: 2dppx)"
+                                            srcset="./image/trust-us/3-2x.webp"
+                                            type="image/webp"
+                                        >
+                                        <!-- Изображение в формате WebP (без Retina) -->
+                                        <source
+                                            srcset="./image/trust-us/3-1x.webp"
+                                            type="image/webp"
+                                        >
+                                        <!-- Обычное изображение (без Retina и WebP) -->
+                                        <img
+                                            src="./image/trust-us/3-1x.png"
+                                            alt="Логотип Эфко"
+                                            loading="lazy"
+                                        >
+                                    </picture>
                                 </div>
                                 <div class="trust-us__img">
-                                    <img src="./image/trust-us/2-1x.png" srcset="./image/trust-us/2-2x.png" alt="Лукойл">
+                                    <picture>
+                                        <!-- Изображение для Retina и WebP -->
+                                        <source
+                                            media="(min-resolution: 2dppx)"
+                                            srcset="./image/trust-us/2-2x.webp"
+                                            type="image/webp"
+                                        >
+                                        <!-- Изображение в формате WebP (без Retina) -->
+                                        <source
+                                            srcset="./image/trust-us/2-1x.webp"
+                                            type="image/webp"
+                                        >
+                                        <!-- Обычное изображение (без Retina и WebP) -->
+                                        <img
+                                            src="./image/trust-us/2-1x.png"
+                                            alt="Логотип Лукойл"
+                                            loading="lazy"
+                                        >
+                                    </picture>
                                 </div>
                                 <div class="trust-us__img">
-                                    <img src="./image/trust-us/4-1x.png" srcset="./image/trust-us/4-2x.png" alt="Вертолеты России">
+                                    <picture>
+                                        <!-- Изображение для Retina и WebP -->
+                                        <source
+                                            media="(min-resolution: 2dppx)"
+                                            srcset="./image/trust-us/4-2x.webp"
+                                            type="image/webp"
+                                        >
+                                        <!-- Изображение в формате WebP (без Retina) -->
+                                        <source
+                                            srcset="./image/trust-us/4-1x.webp"
+                                            type="image/webp"
+                                        >
+                                        <!-- Обычное изображение (без Retina и WebP) -->
+                                        <img
+                                            src="./image/trust-us/4-1x.png"
+                                            alt="Логотип Вертолеты России"
+                                            loading="lazy"
+                                        >
+                                    </picture>
                                 </div>
                             </div>
 
                             <div class="trust-us__content-container">
                                 <div class="trust-us__img">
-                                    <img src="./image/trust-us/6-1x.png" srcset="./image/trust-us/6-2x.png" alt="Серовский механический завод">
+                                    <picture>
+                                        <!-- Изображение для Retina и WebP -->
+                                        <source
+                                            media="(min-resolution: 2dppx)"
+                                            srcset="./image/trust-us/6-2x.webp"
+                                            type="image/webp"
+                                        >
+                                        <!-- Изображение в формате WebP (без Retina) -->
+                                        <source
+                                            srcset="./image/trust-us/6-1x.webp"
+                                            type="image/webp"
+                                        >
+                                        <!-- Обычное изображение (без Retina и WebP) -->
+                                        <img
+                                            src="./image/trust-us/6-1x.png"
+                                            alt="Логотип Саха ТрансНефтеГаз"
+                                            loading="lazy"
+                                        >
+                                    </picture>
                                 </div>
                                 <div class="trust-us__img">
-                                    <img class="trust-us__img-zav" src="./image/trust-us/5-1x.png" srcset="./image/trust-us/5-2x.png" alt="Серовский механический завод">
+                                    <picture>
+                                        <!-- Изображение для Retina и WebP -->
+                                        <source
+                                            media="(min-resolution: 2dppx)"
+                                            srcset="./image/trust-us/5-2x.webp"
+                                            type="image/webp"
+                                        >
+                                        <!-- Изображение в формате WebP (без Retina) -->
+                                        <source
+                                            srcset="./image/trust-us/5-1x.webp"
+                                            type="image/webp"
+                                        >
+                                        <!-- Обычное изображение (без Retina и WebP) -->
+                                        <img
+                                            src="./image/trust-us/5-1x.png"
+                                            alt="Серовский механический завод"
+                                            loading="lazy"
+                                        >
+                                    </picture>
                                 </div>
                             </div>
                     </div>
@@ -366,7 +690,24 @@
                     <div class="footer-contact__basis">
                         <div class="footer-logo__wrapper">
                             <div class="footer-logo">
-                                <img src="./image/logo-1-x.png" srcset="./image/logo-2x.png" alt="Логотип УралНефтеТранс">
+                                <picture>
+                                    <!-- Изображение для Retina и WebP -->
+                                    <source
+                                        media="(min-resolution: 2dppx)"
+                                        srcset="./image/logo-2x.webp"
+                                        type="image/webp"
+                                    >
+                                    <!-- Изображение в формате WebP (без Retina) -->
+                                    <source
+                                        srcset="./image/logo-1-x.webp"
+                                        type="image/webp"
+                                    >
+                                    <!-- Обычное изображение (без Retina и WebP) -->
+                                    <img
+                                        src="./image/logo-1-x.png"
+                                        alt="Логотип УралНефтеТранс"
+                                    >
+                                </picture>
                             </div>
                             <div class="footer-social--link">
                                 <p>МЫ В СОЦ.СЕТЯХ</p>
@@ -433,7 +774,7 @@
                                 <li>Официальный сайт ООО“УРАЛНЕФТЕТРАНС”.</li>
                                 <li>Все права защищены</li>
                             </ul>
-                            <a href="https://uralneftetrans.ru/policy/">Политика компании в отношении обработки персональных данных</a>
+                            <a target="_blank" href="https://uralneftetrans.ru/policy/">Политика компании в отношении обработки персональных данных</a>
                         </div>
                     </div>
                 </div>
@@ -449,26 +790,23 @@
                     <p>Оставьте свой номер и наш специалист перезвонит вам в течении 5 минут (в рабочее время)</p>
                 </div>
                 <form class="form-contact form-send" method="post" action="mail.php">
-                    <label for="name">
+                    <label>
                         <p>Имя</p>
                         <input class="input-form input-form__contact" type="text" name="name">
                     </label>
-                    <label for="phone">
+                    <label>
                         <p>Телефон <span>(Обязательно)</span></p>
                         <input class="input-form phone input-form__contact" type="phone" name="phone" required>
                     </label>
-                    <label for="email">
+                    <label>
                         <p>E-mail <span>(Обязательно)</span></p>
-                        <input class="input-form phone input-form__contact" type="email" name="email" required>
+                        <input class="input-form email input-form__contact" type="email" name="email" required>
                     </label>
-                    <!-- <label for="site">
-                        <p>Сайт компании</p>
-                        <input class="input-form phone input-form__contact" type="text" name="site" required>
-                    </label> -->
-                    <label for="message">
+                    <label>
                         <p>Сообщение</p>
                         <textarea class="input-form input-form__contact" name="text"></textarea>
                     </label>
+                    <input type="text" name="form-name" value="Форма Звонка" hidden>
 
                     <button class="form-btn decortion-btn send-form" type="button">позвоните мне</button>
 
@@ -483,11 +821,49 @@
             </div>
         </div>
     </div>
+    <div class="pop-up pop-up-two">
+        <div class="pop-up__container">
+            <div class="pop-up__body">
+                <div class="pop-up__body-text">
+                    <h2>Получить Расчет</h2>
+                    <p>Для получения расчета, заполните пожалуйста форму. Мы свяжемся с вами в самое ближайшее время</p>
+                </div>
+                <form class="form-contact form-send" method="post" action="mail.php">
+                    <label>
+                        <p>Имя</p>
+                        <input class="input-form input-form__contact" type="text" name="name">
+                    </label>
+                    <label>
+                        <p>Телефон <span>(Обязательно)</span></p>
+                        <input class="input-form phone input-form__contact" type="phone" name="phone" required>
+                    </label>
+                    <label>
+                        <p>E-mail <span>(Обязательно)</span></p>
+                        <input class="input-form email input-form__contact" type="email" name="email" required>
+                    </label>
+                    <label>
+                        <p>Сообщение</p>
+                        <textarea class="input-form input-form__contact" name="text"></textarea>
+                    </label>
+                    <input type="text" name="form-name" value="Форма Расчета" hidden>
+                    <button class="form-btn decortion-btn send-form" type="button">Получить</button>
+
+                    <div class="personality">
+                        <input class="custom-checkbox" type="checkbox" required name="cheese" id="cheesee" />
+                        <label for="cheesee">
+                            <p>Я даю свое согласие на обработку персональных данных и соглашаюсь с <a href="https://uralneftetrans.ru/policy/">политикой конфиденциальности</a></p>  
+                        </label>
+                    </div>
+                </form>
+                <div class="pop-up__close pop-up__close-two"></div>
+            </div>
+        </div>
+    </div>
     <div class="popup popup-thanks">
         <div class="popup__wrapper">
             <div class="popup__inner">
                 <div class="popup__content">
-                    <button class="btn-close popup__btn-close"></button>
+                    <button class="btn-close popup__btn-close btn-close-thanks"></button>
                     <h2 class="page-title popup__title">Успешно отправлена</h2>
                     <p class="popup__subtitle">Мы с вами свяжемся</p>
                 </div>
@@ -498,7 +874,7 @@
         <div class="popup__wrapper">
             <div class="popup__inner">
                 <div class="popup__content">
-                    <button class="btn-close popup__btn-close"></button>
+                    <button class="btn-close popup__btn-close btn-close-error"></button>
                     <h2 class="page-title popup__title">Произошла ошибка</h2>
                     <p class="popup__subtitle">Пожалуйста, позвоните или напишите нам на почту</p>
                 </div>
@@ -507,7 +883,8 @@
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="./js/jquery.validate.min.js"></script> 
     <script src="./js/script.js"></script>
 </body>
 </html>

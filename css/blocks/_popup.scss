@@ -247,7 +247,7 @@ textarea.input-form::placeholder {
   }
   
   .popup__content {
-    background-image: linear-gradient(90deg, #CD00FA 20%, #651DDB 80%);
+    background-image: linear-gradient(90deg, #262427 20%, #008DDE 80%);
     border-radius: 50px;
     padding: 70px 20px;
     max-width: 730px;
@@ -321,12 +321,7 @@ textarea.input-form::placeholder {
   .page-title--accent {
     color: #ffa650;
   }
-  
-  @media (max-width: 576px) {
-    .page-title {
-      font-size: 36px;
-    }
-  }
+
   .popup__title {
     margin-bottom: 20px;
   }
@@ -343,7 +338,22 @@ textarea.input-form::placeholder {
     max-width: 360px;
     margin: 0 auto 40px;
   }
-
+  
+  @media (max-width: 576px) {
+    .page-title {
+      font-size: 28px;
+    }
+    .popup__content {
+      padding: 20px 30px;
+    }
+    .popup__subtitle {
+      font-size: 18px;
+    }
+    .btn-close::before, .btn-close::after {
+      top: 0;
+      height: 20px;
+    }
+  }
   @media (max-width: 800px) {
     .pop-up__body {
       height: 641px;

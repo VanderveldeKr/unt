@@ -53,21 +53,22 @@ body {
     right: 7%;
     bottom: 60px;
     border-radius: 50%;
-    background-image: url(../image/icon/red-call.png);
+    background-image: url(../image/icon/red-call.svg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: 102%;
     cursor: pointer;
     z-index: 30;
     transition: .3s;
     animation: pulse-red 2s infinite;
+    background-color: #fff;
   }
 
   .button-group-list {
     height: 73px;
     position: fixed;
     right: 1%;
-    bottom: 21%;
+    bottom: 12%;
     color: red;
     z-index: 30;
     opacity: 0;
@@ -81,21 +82,21 @@ body {
       ul {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 10px;
       }
       li {
         display: flex;
-        gap: 20px;
+        gap: 10px;
         justify-content: start;
       }
-      p {
+      a {
         color: #000;
         font-size: 18px;
         font-weight: 400;
       }
       img {
-        width: 48px;
-        height: 48px;
+        width: 32px;
+        height: 32px;
         object-fit: cover;
       }
     }
@@ -118,25 +119,17 @@ body {
       box-shadow: 0 0 0 0 rgba(28, 180, 255, 0);
     }
   }
-  .call-bottom-button__dubble {
-    width: 100px; 
-    height: 100px;
-    right: 16%;
-  }
 @media (max-width: 800px) {
-  .call-bottom-button, .call-bottom-button__dubble {
+  .call-bottom-button {
     width: 45px;
     height: 45px;
-  }
-  .call-bottom-button__dubble {
-    right: 30%;
   }
   .button-group-list {
     height: auto;
     width: 200px;
     position: fixed;
-    right: 3%;
-    bottom: 2%;
+    right: 5%;
+    bottom: 1%;
     color: red;
     z-index: 30;
     opacity: 0;
@@ -159,7 +152,7 @@ body {
         gap: 5px;
         justify-content: start;
       }
-      p {
+      a {
         color: #000;
         font-size: 12px;
         font-weight: 400;
