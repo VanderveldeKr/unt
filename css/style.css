@@ -1329,7 +1329,7 @@ body {
 }
 .footer-social--link ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   gap: 50px;
 }
 .footer-social--link .social {

@@ -161,6 +161,22 @@ openPopUpTwo.forEach(b => b.addEventListener('click', function(e) {
     body.classList.remove('scroll-lock'); // Удаление класса для разблокировки прокрутки
   });
 }));
+
+const openPopUpThree = document.querySelectorAll('.open-pop-up-three');
+const popUpThree = document.querySelector('.pop-up-three');
+const closePopUpTh = document.querySelector('.pop-up__close-three');
+
+// PopUp Заявки
+openPopUpThree.forEach(b => b.addEventListener('click', function(e) {
+  e.preventDefault();
+  popUpThree.classList.add('active-pop-up');
+  body.classList.add('scroll-lock'); // Добавление класса для блокировки прокрутки
+
+  closePopUpTh.addEventListener('click', () => {
+    popUpThree.classList.remove('active-pop-up');
+    body.classList.remove('scroll-lock'); // Удаление класса для разблокировки прокрутки
+  });
+}));
 //////////////////////////////////////////////////////////////
 
 

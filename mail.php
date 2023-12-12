@@ -19,7 +19,7 @@
     $procedures = $data['procedures'];
     $fasting = $data['fasting'];
  
-    $to = "romandetkinperm@yandex.ru"; 
+    $to = "info@unt-ufa.ru"; 
     $date = date ("d.m.Y"); 
     $time = date ("h:i");
     $subject = "Заявки с Лид Формы";
